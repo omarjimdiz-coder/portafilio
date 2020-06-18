@@ -3,21 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="shortcut icon" href="./img/cricle.svg" type="image/x-icon" />
     <title>Youtube - Identados</title>
   </head>
   <body>
+    <header id="header">
+      <div class="logo">
+        <img src="./img/cricle.svg" alt="logo" class="btn-logo" />
+        <h1>Omar Jiménez</h1>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./youtube.html">Youtube</a>
+          </li>
+          <li>
+            <a href="proyectos.html">Proyectos</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <hgroup id="canal-y">
+      <h2>Identados</h2>
+      <h3>Últimos cinco vídeos del canal</h3>
+    </hgroup>
+
+    <a
+      class="ir-i"
+      href="https://www.youtube.com/channel/UCFUzDp1l50Tl5ojxyZFtIrw"
+      target="_blank"
+      >Canal</a
+    >
+
     <div id="contenedor">
-      <table border="1" id="tabla">
+      <table id="tabla">
         <thead>
-          <tr>
+          <tr class="tabla-c">
             <th>Nombre</th>
             <th>URL</th>
-            <th>Publicado el</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody class="cuerpo-t"></tbody>
       </table>
     </div>
+
+    <section id="youtube">
+      <hgroup>
+        <h4>Identados</h4>
+        <h5>
+          Mi canal de Youtube con mis compañeros y amigos Emmanuel, David y Joe
+          (Editor de vídeos), este canal esta enfocado hacia la gente que le
+          gustaría aprender a programar y el desarrollo web, de igual manera
+          tocamos temas para gente que ya tiene más conocimiento.
+        </h5>
+      </hgroup>
+
+      <div id="identados">
+        <div class="logo1">
+          <a
+            href="https://www.youtube.com/channel/UCFUzDp1l50Tl5ojxyZFtIrw"
+            target="_blank"
+            ><img src="./img/identados.jpg" alt="identados"
+          /></a>
+        </div>
+        <div class="video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/5wUfZ16ZsU0"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="footer">
+      <p class="creado">
+        Desarrollado por &copy; Omar
+      </p>
+    </footer>
     <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
     <script>
       var nextPageToken = "";
@@ -49,7 +120,6 @@
               "</tr><tr>" +
               urlVideo +
               "</tr><tr>" +
-              fechaVideo +
               "</tr>"
           );
           $("table tbody").append(
@@ -58,7 +128,6 @@
               "</td><td>" +
               urlVideo +
               "</td><td>" +
-              fechaVideo +
               "</td></tr>"
           );
         }
