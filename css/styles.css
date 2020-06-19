@@ -230,6 +230,7 @@
 #identados img {
   border-radius: 50%;
   width: 200px;
+  margin-bottom: 50px;
 }
 
 .video {
@@ -284,6 +285,7 @@ h3 {
   padding: 10px;
   border-radius: 5px;
   margin: 0 auto;
+  margin-bottom: 50px;
   margin-top: 20px;
   text-align: center;
   background-color: rgba(67, 134, 134, 0.486);
@@ -293,28 +295,6 @@ h3 {
 .ir-i:hover {
   color: rgba(43, 196, 196, 0.781);
   background-color: white;
-}
-
-#tabla {
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 47px;
-  text-align: center;
-  border-radius: 5px;
-  padding-bottom: 70px;
-}
-
-.tabla-c {
-  background-color: rgba(67, 134, 134, 0.486);
-}
-
-.tabla-c th {
-  font-family: "Courier New", Courier, monospace;
-}
-
-.cuerpo-t {
-  background-color: white;
-  color: black;
 }
 
 /*Estilos de proyectos.html*/
@@ -473,11 +453,15 @@ h3 {
 @media (max-width: 380px) {
   #header {
     display: grid;
-    grid-template-columns: 29% 69%;
+    grid-template-columns: 32% 86%;
   }
 
   .logo {
     font-size: 6px;
     margin-left: -4px;
+  }
+
+  .menu ul li a {
+    font-size: 13px;
   }
 }

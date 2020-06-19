@@ -30,7 +30,6 @@
 
     <hgroup id="canal-y">
       <h2>Identados</h2>
-      <h3>Últimos cinco vídeos del canal</h3>
     </hgroup>
 
     <a
@@ -39,18 +38,6 @@
       target="_blank"
       >Canal</a
     >
-
-    <div id="contenedor">
-      <table id="tabla">
-        <thead>
-          <tr class="tabla-c">
-            <th>Nombre</th>
-            <th>URL</th>
-          </tr>
-        </thead>
-        <tbody class="cuerpo-t"></tbody>
-      </table>
-    </div>
 
     <section id="youtube">
       <hgroup>
@@ -81,6 +68,25 @@
             allowfullscreen
           ></iframe>
         </div>
+
+        <div class="video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/b0Yyhb-w41M"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="logo1">
+          <a
+            href="https://www.youtube.com/watch?v=b0Yyhb-w41M&t=36s"
+            target="_blank"
+            ><img src="./img/youtube/html.svg"
+          /></a>
+        </div>
       </div>
     </section>
 
@@ -89,49 +95,5 @@
         Desarrollado por &copy; Omar
       </p>
     </footer>
-    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-    <script>
-      var nextPageToken = "";
-      // Resultados por pagina
-      var resPorPagina = 5;
-      // Paginas a mostrar
-      var paginas = 1;
-      var key = "AIzaSyAIbWIS73cCD8-3yJCoP0_4G6fSIqqvD7M";
-      var idCanal = "UCFUzDp1l50Tl5ojxyZFtIrw";
-      var url =
-        "https://www.googleapis.com/youtube/v3/search?key=" +
-        key +
-        "&channelId=" +
-        idCanal +
-        "&part=snippet,id&order=date&maxResults=" +
-        resPorPagina;
-      //$("#contenedor").append(url);
-      $.getJSON(url, function (data) {
-        for (var k in data.items) {
-          var tituloVideo = data.items[k]["snippet"].title;
-          var urlVideo =
-            "https://www.youtube.com/watch?v=" + data.items[k]["id"].videoId;
-          var fechaVideo = data.items[k]["snippet"].publishedAt;
-
-          //console.log(k, data.items[k]["id"].videoId);
-          $("#tabla tr:last").after(
-            "<tr>" +
-              tituloVideo +
-              "</tr><tr>" +
-              urlVideo +
-              "</tr><tr>" +
-              "</tr>"
-          );
-          $("table tbody").append(
-            "<tr><td>" +
-              tituloVideo +
-              "</td><td>" +
-              urlVideo +
-              "</td><td>" +
-              "</td></tr>"
-          );
-        }
-      });
-    </script>
   </body>
 </html>
