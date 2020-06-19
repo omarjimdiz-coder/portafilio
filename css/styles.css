@@ -453,7 +453,7 @@ h3 {
 @media (max-width: 380px) {
   #header {
     display: grid;
-    grid-template-columns: 32% 86%;
+    grid-template-columns: 32% 68%;
   }
 
   .logo {
