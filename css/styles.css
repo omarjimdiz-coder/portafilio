@@ -5,13 +5,19 @@
     "Helvetica Neue", sans-serif;
 }
 
+:root {
+  --second-modal-color: rgba(34, 34, 34, 0.85);
+}
+
 #header {
   display: grid;
-  grid-template-columns: 67% 33%;
+  grid-template-columns: 71% 39%;
   align-items: center;
   width: 100%;
   height: 100px;
   background-color: rgba(67, 134, 134, 0.486);
+  position: fixed;
+  z-index: 999;
 }
 
 .logo {
@@ -42,25 +48,49 @@
   margin: 7px;
 }
 
-.menu ul {
+.panel {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--second-modal-color);
+  transition: transform 0.3s ease;
+  width: 100%;
+  /*De arriba*/
+  /*transform: translate(0, -100%);*/
+  /*De abajo*/
+  /*transform: translate(0, 100%);*/
+  /*De izquierda*/
+  /*transform: translate(-100%, 0);*/
+  /*De la derecha*/
+  transform: translate(100%, 0);
+}
+
+.panel.is-active {
+  transform: translate(0%, 0%);
+}
+
+.panel .menu {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 110px;
 }
 
-.menu ul li {
-  padding-left: 25px;
-  list-style: none;
-}
-
-.menu ul li a {
+.menu a {
+  padding-top: 5rem;
+  font-size: 30px;
   text-decoration: none;
-  color: black;
-  transition: all 300ms;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
+  color: rgba(43, 196, 196, 0.781);
+  transition: all 200ms;
 }
 
-.menu ul li a:hover {
-  color: aliceblue;
+.menu a:hover {
+  color: black;
+  text-decoration: underline;
 }
 
 #fondo {
@@ -71,7 +101,7 @@
 }
 
 #fondo h2 {
-  padding-top: 155px;
+  padding-top: 180px;
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -169,6 +199,11 @@
 #proyectos {
   text-align: center;
   background-color: #eeeeee;
+  padding-top: 6pc;
+}
+
+.my-project {
+  background-color: white;
 }
 
 #proyectos h3 {
@@ -188,6 +223,7 @@
 #miproyectos {
   display: grid;
   grid-template-columns: 50% 50%;
+  margin-top: 4pc;
 }
 
 #miproyectos h4 {
@@ -268,6 +304,7 @@
 #canal-y {
   text-align: center;
   padding-top: 40px;
+  padding-top: 9pc;
 }
 
 #canal-y h2 {
@@ -326,7 +363,7 @@ h3 {
 @media (max-width: 932px) {
   #header {
     display: grid;
-    grid-template-columns: 56% 44%;
+    grid-template-columns: 74% 33%;
   }
 
   #fondo h2 {
@@ -337,7 +374,7 @@ h3 {
 @media (max-width: 710px) {
   #header {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 66% 45%;
   }
 
   #youtube h5 {
@@ -359,15 +396,15 @@ h3 {
 @media (max-width: 640px) {
   #header {
     display: grid;
-    grid-template-columns: 46% 54%;
+    grid-template-columns: 63% 47%;
   }
 
   .btn-logo {
-    width: 40px;
+    width: 50px;
   }
 
   .logo {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .menu ul li a {
@@ -420,7 +457,11 @@ h3 {
 @media (max-width: 538px) {
   #header {
     display: grid;
-    grid-template-columns: 43% 57%;
+    grid-template-columns: 53% 62%;
+  }
+
+  .logo {
+    margin-left: 22px;
   }
 
   .menu ul li a {
@@ -428,10 +469,16 @@ h3 {
   }
 }
 
+@media (max-width: 466px) {
+  .logo {
+    font-size: 9px;
+  }
+}
+
 @media (max-width: 462px) {
   #header {
     display: grid;
-    grid-template-columns: 39% 59%;
+    grid-template-columns: 64% 42%;
   }
 
   .logo {
@@ -442,11 +489,11 @@ h3 {
 @media (max-width: 426px) {
   #header {
     display: grid;
-    grid-template-columns: 34% 66%;
+    grid-template-columns: 62% 51%;
   }
 
   .logo {
-    font-size: 7px;
+    font-size: 9px;
     margin-left: 1px;
   }
 
@@ -465,12 +512,12 @@ h3 {
 @media (max-width: 380px) {
   #header {
     display: grid;
-    grid-template-columns: 32% 68%;
+    grid-template-columns: 62% 38%;
   }
 
   .logo {
-    font-size: 6px;
-    margin-left: -4px;
+    font-size: 8px;
+    margin-left: 1px;
   }
 
   .menu ul li a {

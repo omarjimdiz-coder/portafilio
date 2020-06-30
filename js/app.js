@@ -1,9 +1,9 @@
-"use strict";
+//Menu hamburguesa
 
-let texto =
-  "Hola mi nombre es Omar. Soy desarrollador web jr, ubicado en la CDMX";
+let panelBtn = document.querySelector(".panel-btn");
+let panel = document.querySelector(".panel");
 
-const hablar = (texto) =>
-  speechSynthesis.speak(new SpeechSynthesisUtterance(texto));
-
-hablar(texto);
+panelBtn.addEventListener("click", (e) => {
+  panel.classList.toggle("is-active");
+  panelBtn.classList.toggle("is-active");
+});
