@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dark-theme>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,10 +9,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css"
     />
+    <!--Agregando tipografia-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <title>Omar Jiménez - Portafolio</title>
   </head>
   <body>
-    <header id="header">
+    <header class="header">
       <div>
         <a class="logo" href="./index.html"
           ><img src="./img/cricle.svg" alt="logo" class="btn-logo" />
@@ -53,7 +58,7 @@
       </nav>
     </aside>
 
-    <div id="fondo">
+    <div class="fondo" dark-theme>
       <h2>
         console.log('Hola mi nombre es Omar. Soy desarrollador web jr / Ubicado
         en la CDMX');
@@ -64,7 +69,7 @@
     <section id="conocimientos">
       <h3>Tecnologías</h3>
       <section id="tecnologias">
-        <div class="tecnologia">
+        <div class="tecnologia" dark-theme>
           <h4>Front - End</h4>
           <img src="./img/favicon/front.png" alt="front" />
           <div class="front">
@@ -83,7 +88,7 @@
           </div>
         </div>
 
-        <div class="tecnologia">
+        <div class="tecnologia" dark-theme>
           <h4>Back - End</h4>
           <img src="./img/favicon/back.png" alt="back" />
           <ul class="back">
@@ -96,7 +101,7 @@
       </section>
     </section>
 
-    <section id="proyectos">
+    <section class="proyectos" dark-theme>
       <hgroup>
         <h3>Proyectos</h3>
         <h5>
@@ -153,7 +158,7 @@
       </div>
     </section>
 
-    <footer id="footer">
+    <footer class="footer" dark-theme>
       <p class="creado">
         Desarrollado por &copy; Omar
       </p>
@@ -163,8 +168,13 @@
       &#11014;
     </button>
 
+    <button class="dark-theme-btn">
+      🌙
+    </button>
+
     <script src="./js/app.js"></script>
     <script src="./js/talk.js"></script>
     <script src="./js/boton_scroll.js"></script>
+    <script src="./js/modo_oscuro.js"></script>
   </body>
 </html>

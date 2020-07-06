@@ -1,15 +1,14 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 :root {
   --second-modal-color: rgba(34, 34, 34, 0.85);
 }
 
-#header {
+.header {
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
@@ -132,22 +131,22 @@
   text-decoration: underline;
 }
 
-#fondo {
+.fondo {
   width: 100%;
   height: 350px;
   background-color: #eeeeee;
   text-align: center;
 }
 
-#fondo h2 {
+.fondo h2 {
   padding-top: 180px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
-#fondo a {
+.fondo a {
   display: block;
   text-decoration: none;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   color: rgba(43, 196, 196, 0.781);
   width: 100px;
@@ -163,7 +162,7 @@
     -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
 }
 
-#fondo a:hover {
+.fondo a:hover {
   color: aliceblue;
   background-color: rgba(67, 134, 134, 0.486);
 }
@@ -177,7 +176,7 @@
 #conocimientos h3 {
   display: block;
   font-size: 25px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   padding: 10px;
   padding-top: 30px;
   padding-bottom: 35px;
@@ -201,7 +200,7 @@
 }
 
 .tecnologia h4 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
 }
 
@@ -222,7 +221,7 @@
 
 .front ul li {
   list-style: none;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
 .back {
@@ -232,29 +231,30 @@
 .back li {
   text-align: start;
   list-style: none;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
-#proyectos {
+.proyectos {
   text-align: center;
   background-color: #eeeeee;
-  padding-top: 6pc;
+  padding-top: 3pc;
 }
 
 .my-project {
   background-color: white;
+  margin-top: 53px;
 }
 
-#proyectos h3 {
+.proyectos h3 {
   display: block;
   font-size: 25px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   padding: 10px;
   padding-top: 30px;
 }
 
-#proyectos h5 {
-  font-family: "Courier New", Courier, monospace;
+.proyectos h5 {
+  font-family: "Montserrat", sans-serif;
   padding-bottom: 35px;
   font-size: 17px;
 }
@@ -262,11 +262,11 @@
 #miproyectos {
   display: grid;
   grid-template-columns: 50% 50%;
-  margin-top: 4pc;
+  margin-top: 2pc;
 }
 
 #miproyectos h4 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
 #miproyectos img {
@@ -288,7 +288,7 @@
 }
 
 #youtube h4 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 25px;
   padding-top: 35px;
 }
@@ -296,7 +296,7 @@
 #youtube h5 {
   font-size: 17px;
   padding-top: 10px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
 #identados {
@@ -327,7 +327,7 @@
   border-radius: 5px;
 }
 
-#footer {
+.footer {
   width: 100%;
   height: 100px;
   background-color: #eeeeee;
@@ -363,6 +363,38 @@
     12px -12px 16px rgba(255, 255, 255, 0.25);
 }
 
+.dark-theme-btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  left: 1vw;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: all 200ms ease-out;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
+
+.dark-theme-btn:hover {
+  background-color: rgba(67, 134, 134, 0.486);
+  color: #eeeeee;
+  box-shadow: -8px 8px 12px 0 rgba(0, 0, 0, 0.3),
+    12px -12px 16px rgba(255, 255, 255, 0.25);
+}
+
+.dark-mode {
+  background-color: black;
+  color: aliceblue;
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;
@@ -391,13 +423,13 @@
 
 #canal-y h2,
 h3 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
 .ir-i {
   display: block;
   text-decoration: none;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   font-size: 17px;
   color: white;
   width: 100px;
@@ -434,7 +466,7 @@ h3 {
 }
 
 @media (max-width: 932px) {
-  #header {
+  .header {
     display: grid;
     grid-template-columns: 66% 33%;
   }
@@ -453,7 +485,7 @@ h3 {
 }
 
 @media (max-width: 710px) {
-  #header {
+  .header {
     display: grid;
     grid-template-columns: 66% 45%;
   }
@@ -475,7 +507,7 @@ h3 {
 }
 
 @media (max-width: 640px) {
-  #header {
+  .header {
     display: grid;
     grid-template-columns: 63% 47%;
   }
@@ -535,8 +567,14 @@ h3 {
   }
 }
 
+@media (max-width: 518px) {
+  .fondo h2 {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 538px) {
-  #header {
+  .header {
     display: grid;
     grid-template-columns: 53% 62%;
   }
@@ -557,7 +595,7 @@ h3 {
 }
 
 @media (max-width: 462px) {
-  #header {
+  .header {
     display: grid;
     grid-template-columns: 64% 42%;
   }
@@ -568,7 +606,7 @@ h3 {
 }
 
 @media (max-width: 426px) {
-  #header {
+  .header {
     display: grid;
     grid-template-columns: 62% 51%;
   }
@@ -591,7 +629,7 @@ h3 {
 }
 
 @media (max-width: 380px) {
-  #header {
+  .header {
     display: grid;
     grid-template-columns: 62% 38%;
   }
