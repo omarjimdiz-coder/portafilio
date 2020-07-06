@@ -11,7 +11,7 @@
 
 #header {
   display: grid;
-  grid-template-columns: 71% 39%;
+  grid-template-columns: 50% 50%;
   align-items: center;
   width: 100%;
   height: 100px;
@@ -71,6 +71,38 @@
 
 .panel.is-active {
   transform: translate(0%, 0%);
+}
+
+.menu-big {
+  padding-right: 30px;
+}
+
+.menu-big ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-big ul li {
+  padding: 15px;
+  list-style: none;
+}
+
+.menu-big a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  transition: all 200ms;
+}
+
+.menu-big a:hover {
+  text-decoration: underline;
+  color: #eeeeee;
+  font-size: 20px;
+}
+
+#hamburguesa {
+  display: none;
 }
 
 .panel .menu {
@@ -363,11 +395,19 @@ h3 {
 @media (max-width: 932px) {
   #header {
     display: grid;
-    grid-template-columns: 74% 33%;
+    grid-template-columns: 66% 33%;
   }
 
   #fondo h2 {
     font-size: 16px;
+  }
+
+  .menu-big {
+    display: none;
+  }
+
+  #hamburguesa {
+    display: block;
   }
 }
 
