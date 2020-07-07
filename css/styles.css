@@ -184,7 +184,7 @@
 
 #tecnologias {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(3, 33%);
 }
 
 .tecnologia {
@@ -261,7 +261,7 @@
 
 #miproyectos {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(3, 33%);
   margin-top: 2pc;
 }
 
@@ -462,6 +462,22 @@ h3 {
 @media (max-width: 960px) {
   #fondo h2 {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 984px) {
+  #tecnologias {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .tecnologia {
+    margin-bottom: 2pc;
+  }
+
+  #miproyectos {
+    display: grid;
+    grid-template-columns: 50% 50%;
   }
 }
 
