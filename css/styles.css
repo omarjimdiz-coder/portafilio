@@ -330,7 +330,7 @@
 .footer {
   width: 100%;
   height: 100px;
-  background-color: #eeeeee;
+  background-color: rgba(67, 134, 134, 0.486);
   text-align: center;
 }
 
@@ -390,9 +390,40 @@
     12px -12px 16px rgba(255, 255, 255, 0.25);
 }
 
+/*Modo dark*/
 .dark-mode {
   background-color: black;
   color: aliceblue;
+}
+/*Termina modo dark*/
+
+/*Contacto*/
+
+.contacto {
+  background-color: white;
+  text-align: center;
+  margin: 40px;
+}
+
+.contacto h3 {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.contacto ul {
+  display: grid;
+  justify-content: center;
+}
+
+.contacto ul li {
+  font-size: 20px;
+  list-style: none;
+  text-align: justify;
+}
+
+.contacto a {
+  text-decoration: underline;
+  color: rgba(67, 134, 134, 0.486);
 }
 
 .hidden {
@@ -449,6 +480,18 @@ h3 {
 .ir-i:hover {
   color: rgba(43, 196, 196, 0.781);
   background-color: white;
+}
+
+.footerY {
+  width: 100%;
+  height: 100px;
+  background-color: #eeeeee;
+  text-align: center;
+}
+
+.creadoY {
+  padding-top: 40px;
+  padding-bottom: 39px;
 }
 
 /*Estilos de proyectos.html*/
@@ -621,6 +664,12 @@ h3 {
   }
 }
 
+@media (max-width: 414px) {
+  .contacto ul li {
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 426px) {
   .header {
     display: grid;
@@ -657,5 +706,15 @@ h3 {
 
   .menu ul li a {
     font-size: 13px;
+  }
+
+  .contacto ul li {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 364px) {
+  .contacto ul li {
+    font-size: 16px;
   }
 }
