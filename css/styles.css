@@ -413,12 +413,19 @@
 .contacto ul {
   display: grid;
   justify-content: center;
+  align-items: center;
 }
 
 .contacto ul li {
   font-size: 20px;
   list-style: none;
   text-align: justify;
+  margin-top: 5px;
+}
+
+.contacto ul li img {
+  position: relative;
+  top: 5px;
 }
 
 .contacto a {
